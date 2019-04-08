@@ -1,0 +1,40 @@
+
+
+<nav style="opacity:0.8;" class="navbar navbar-inverse navbar-fixed-top" >
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+            <li class="active"><a routerLink="/navbar">Home</a></li>
+            <li><a routerLink="/showMobiles">Mobiles</a></li>
+            <li><a routerLink="/showAcc">Accessories</a></li>
+            <li style="margin-top:15px;margin-left:50px;" >
+              <input type="text" style="width:600px;height:36px;border-radius: 5%;" #searchText>
+              <button style="height:36px;border-radius: 5%;" (click)="search(searchText.value)" ><span  class="glyphicon glyphicon-search"></span> Search</button>>
+            </li>
+    
+           <li >
+            
+            <div *ngIf="controlButtons();else elseblock" style="margin-top:15px;margin-left:90px;">
+            <a routerLink="/register"><span class="glyphicon glyphicon-user"></span> Register</a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a routerLink="/login" ><span   class="glyphicon glyphicon-log-in"></span> Login</a>
+           </div>
+    
+           <ng-template #elseblock >
+             <div style="margin-top:15px;margin-left:100px;">
+              <a id=cart (click)="getItemsInCart()"><span class="glyphicon glyphicon-shopping-cart" style="color:yellow;font-size:20px;">Cart<span id="cart-count" class="badge" style="background:red; position:relative;top:-14px;right:8px;">{{count}}</span></span></a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a (click)="logout()" ><span   class="glyphicon glyphicon-log-in"></span> Logout</a>>
+              </div>
+            </ng-template>
+          </li>
+          </ul>
+    
+    
+         
+         
+        </div>
+      </nav>
+     
+<router-outlet></router-outlet>
+
+

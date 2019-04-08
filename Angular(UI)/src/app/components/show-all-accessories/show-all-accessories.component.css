@@ -1,0 +1,131 @@
+@media (min-width: 992px) {
+.container-scroll > .row {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.container-scroll > .row > .col-md-2 {
+    display: inline-block;
+    float: none;
+}
+}
+
+.container-scroll > .row {
+margin-top: 24px;
+}
+.container-scroll > .row > .col-md-2 {
+font-weight: bold;
+text-align: center;
+}
+
+
+#mobile-list.row{
+    height:430px;
+    margin-top: 20px;
+}
+
+#acc-list.row{
+    height:430px;
+    margin-top: 20px;
+}
+
+.item{
+margin-left: 20px;
+margin-right: 20px;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.card
+{
+    border: 2px solid #eee;
+    margin-top: 10px;
+}
+
+.card:hover{
+background-color: #ddeedd;	
+border: 2px solid rgb(255, 255, 255);
+    transform: scale(1.02); 
+}
+
+.thumbnail:hover{
+    border:2px solid #b3ffb3;	
+    
+}
+.card-title{
+    font-weight: 600;
+}
+.card-text{
+    font-weight: normal;
+    font-family: inherit;
+}
+
+#acc-list img{
+    width: 150px;
+    height: 200px;
+    margin-top: 5px;
+}
+
+#mobile-list img{
+    width: 150px;
+    height: 200px;
+    margin-top: 5px;
+}
+
+#orders img{
+    width: 150px;
+    height: 200px;
+    margin-top: 5px;
+}
+#allmobiles img{
+    width: 150px;
+    height: 200px;
+    margin-top: 5px;	
+}
+#products img{
+    width: 150px;
+    height: 200px;
+    margin-top: 5px;
+}
+#allaccs img{
+    width: 150px;
+    height: 200px;
+    margin-top: 5px;
+}
+#carddata img{
+    width: 150px;
+    height: 200px;
+    margin-top: 5px;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #b12704;
+}
+
+.caption{
+    color: #728aed;
+}
+button{
+background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+
+text-align: center;
+text-decoration: none;
+display: inline-block;
+
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+cursor: pointer;
+}
+
+button {
+background-color: white; 
+color: black; 
+border: 2px solid #4CAF50;
+}
+
+button:hover {
+background-color: #4CAF50;
+color: white;
+}

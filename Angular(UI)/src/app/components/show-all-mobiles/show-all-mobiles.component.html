@@ -1,0 +1,28 @@
+<div id="mobile-list" class="row">
+  <div *ngFor="let mobile of mobileProduct">
+    <div class='item col-md-2 col-sm-4'>
+      <div class='card' style='width: 18rem;'>
+        <img class='card-img-top' style="margin-left:10px;" src="assets/images/{{mobile.id}}.jpg" alt='Card image cap' />
+        <div class='card-body'>
+          <h5 class='caption card-title'>
+            <span class="text-danger"> {{mobile.mobile.name}} </span>
+          </h5>
+          <br>
+          <strong>RAM:</strong> {{mobile.mobile.ram}}GB
+          <br>
+          <strong> ROM:</strong> {{mobile.mobile.rom}}GB,
+          <br>
+          <strong>Front-Camera:</strong> {{mobile.mobile.fcamera}}MP
+          <br>
+          <strong>Rear Camera: </strong> {{mobile.mobile.rcamera}}MP
+          <br>
+          <div class='price'>&#8377;: {{mobile.price|number}}</div>
+          <button class="btn btn-success" (click)="addToCart(mobile)" style="margin:auto;display:block;">Add to Cart</button>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>

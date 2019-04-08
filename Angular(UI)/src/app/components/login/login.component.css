@@ -1,0 +1,19 @@
+.here{
+display:none;
+}
+
+.image{
+background-image: url("https://www.webreinvent.com/wp-content/uploads/2015/06/mid-image4.png") ;
+background-repeat: no-repeat;
+position:absolute;
+background-position:bottom right;
+
+
+
+}
+.form-block{
+margin-left:30%;
+margin-right:30%;
+border-style: ridge;
+
+}

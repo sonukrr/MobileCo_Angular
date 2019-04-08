@@ -1,0 +1,19 @@
+.here{
+display:none;
+}
+
+.form-block{
+margin-left:30%;
+margin-right:30%;
+border-style: ridge;
+
+}
+.image{
+
+background-image:
+  linear-gradient(
+    rgb(96, 193, 231), #f06d06
+  );
+
+
+}

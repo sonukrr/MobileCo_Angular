@@ -1,0 +1,23 @@
+<div id="mobile-list" class="row">
+    <div *ngFor="let acc of AccessoriesProduct">
+        <div class='item col-md-2 col-sm-4'>
+            <div class='card' style='width: 18rem;'>
+                <img class='card-img-top' style="margin-left:10px;" src="assets/images/{{acc.id}}.jpg" alt='Card image cap' />
+                <div class='card-body'>
+                    <h5 class='caption card-title'>
+                        <span class="text-danger"> {{acc.accessories.name}} </span>
+                    </h5>
+                    <br>
+                    <strong>Brand :</strong>{{acc.brand.name}}
+                    <br>
+
+                    <br>
+                    <div class='price'>&#8377;: {{acc.price|number}}</div>
+                    <button class="btn btn-success" (click)="addToCart(acc)" style="margin:auto;display:block;">Add to Cart</button>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

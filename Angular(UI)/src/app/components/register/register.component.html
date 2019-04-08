@@ -1,0 +1,76 @@
+<div class="image" style="width:100%;height:200%;">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="container-fluid form-block">
+    <form #demoform="ngForm">
+      <br>
+      <div class="form-group">
+        <label>Enter First name and last name :</label>
+        <input type="text" class="form-control" required [(ngModel)]="customer.name" [ngModelOptions]="{standalone: true}">
+      </div>
+
+      <div class="form-group">
+        <label>Enter email :</label>
+        <input type="text" #here="ngModel" class="form-control" [(ngModel)]="customer.email" name="email" required>
+        <small class="text-danger" [class.here]="here.valid && here.touched">Email is required field</small>
+      </div>
+
+      <div class="form-group">
+        <label>Enter Phone number :</label>
+        <input type="text" #phone maxlength=10 #here1="ngModel" class="form-control" [(ngModel)]="customer.phone" name="phone" required>
+        <strong style="float:right;">{{phone.value.length}} / 10</strong>
+        <small class="text-danger" [class.here]="here1.valid && here1.touched">This field can't be empty</small>
+
+      </div>
+
+      <div class="form-group">
+        <label>Set password :</label>
+        <input #here2="ngModel" type="password" class="form-control" [(ngModel)]="customer.password" name="password" required>
+
+        <small class="text-danger" [class.here]="here2.valid && here2.touched">Password is required field</small>
+
+      </div>
+      <strong>Enter address (optional) :</strong>
+      <div class="form-group">
+        <label>Enter street/House/Flat/Room No :</label>
+        <input type="text" class="form-control" required [(ngModel)]="customer.address.street" [ngModelOptions]="{standalone: true}">
+      </div>
+
+      <div class="form-group">
+        <label>State :</label>
+        <select class="form-control" [(ngModel)]="customer.address.state" #s name="state" (change)="getdistricts(s.value)">
+          <option *ngFor="let stat of data.states" value="{{stat.state}}">{{stat.state}}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>City :</label>
+        <select class="form-control" [(ngModel)]="customer.address.city" name="city">
+          <option value="{{district}}" *ngFor="let district of districtList">{{district}}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Country:</label>
+        <input disabled type="text" class="form-control" required [(ngModel)]="customer.address.country" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <label>Pincode :</label>
+        <input type="text" #pin class="form-control" maxlength=6 required [(ngModel)]="customer.address.pincode" [ngModelOptions]="{standalone: true}">
+        <strong>
+          <small style="float:right;">{{pin.value.length}} / 6 </small>
+        </strong>
+      </div>
+
+
+
+      <button style="display:block;margin:auto;" type="submit" [disabled]="demoform.invalid" (click)="onSubmit()" class="btn btn-primary mb-2">Submit</button>
+
+    </form>
+  </div>
+</div>

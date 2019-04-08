@@ -1,0 +1,54 @@
+<div id="mobile-list" class="row">
+  <div *ngFor="let product of searchResult">
+
+    <div *ngIf="checkType(product); else accBlock">
+
+      <div class='item col-md-2 col-sm-4'>
+        <div class='card' style='width: 18rem;'>
+          <img class='card-img-top' style="margin-left:10px;" src="assets/images/{{product.id}}.jpg" alt='Card image cap' />
+          <div class='card-body'>
+            <h5 class='caption card-title'>
+              <span class="text-danger"> {{product.mobile.name}} </span>
+              <br>RAM: {{product.mobile.ram}}GB
+              <br> ROM: {{product.mobile.rom}}GB,
+              <br>Front-Camera: {{product.mobile.fcamera}}MP
+              <br> Rear Camera: {{product.mobile.rcamera}}MP</h5>
+            <br>
+            <div class='price'>&#8377; {{product.price}}</div>
+            <button class="btn btn-success" (click)="addToCart(product)" style="margin:auto;display:block;">Add to Cart</button>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <ng-template #accBlock>
+
+      <div class='item col-md-2 col-sm-4'>
+        <div class='card' style='width: 18rem;'>
+          <img class='card-img-top' style="margin-left:10px;" src="assets/images/{{product.id}}.jpg" alt='Card image cap' />
+          <div class='card-body'>
+            <h5 class='caption card-title'>
+              <span class="text-danger"> {{product.accessories.name}} </span>
+              <br>{{product.brand.name}}
+              <br>
+
+              <br>
+              <div class='price'>&#8377;: {{product.price}}</div>
+              <br>
+              <br>
+              <br>
+              <button class="btn btn-success" (click)="addToCart(product)" style="margin:auto;display:block;">Add to Cart</button>
+
+            </h5>
+          </div>
+        </div>
+      </div>
+
+
+    </ng-template>
+
+  </div>
+</div>
